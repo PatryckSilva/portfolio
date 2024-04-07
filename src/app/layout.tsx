@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.scss";
+import Providers from "@/providers";
+import { ReactElement } from "react";
+import { cn } from "@/lib/utils";
+import EllipseBackground from "@/components/EllipseBackground";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,11 +16,23 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactElement;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "relative min-h-[200vh] bg-background font-sans antialiased",
+          GeistSans.className,
+          GeistMono.className,
+        )}
+      >
+        <aside className={`fixed -right-52 -top-52`}>
+          <EllipseBackground />
+        </aside>
+
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
