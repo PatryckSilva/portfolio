@@ -11,8 +11,8 @@ import {
 
 export const MyStacks = () => {
   return (
-    <div className="relative flex h-full items-center justify-center">
-      <div className=" relative border-spacing-4 rounded-full border-2 border-dashed border-gray-400/50 p-10 ">
+    <aside className="relative flex h-full items-center justify-center">
+      <section className=" relative border-spacing-4 rounded-full border-2 border-dashed border-gray-400/50 p-10 ">
         <ReactLogo />
         <TailwindLogo />
         <TypescriptLogo />
@@ -21,7 +21,7 @@ export const MyStacks = () => {
         <NextLogo />
         <ReactQueryLogo />
         <ProfileCard />
-      </div>
-    </div>
+      </section>
+    </aside>
   );
 };

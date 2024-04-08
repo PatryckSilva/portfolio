@@ -6,7 +6,7 @@ import "@/styles/globals.scss";
 import Providers from "@/providers";
 import { ReactElement } from "react";
 import { cn } from "@/lib/utils";
-import EllipseBackground from "@/components/EllipseBackground";
+import EllipseBackground from "@/components/Backgrounds/EllipseBackground";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,10 +27,9 @@ export default function RootLayout({
           GeistMono.className,
         )}
       >
-        <aside className={`fixed -right-52 -top-52`}>
+        <aside className={`fixed -right-10 -top-10 opacity-90`}>
           <EllipseBackground />
         </aside>
-
         <Providers>{children}</Providers>
       </body>
     </html>

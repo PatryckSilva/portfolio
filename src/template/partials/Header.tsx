@@ -23,7 +23,7 @@ function Header() {
     },
   ];
   return (
-    <div className="container relative">
+    <div className="relative">
       <FloatingNav navItems={navItems} />
     </div>
   );

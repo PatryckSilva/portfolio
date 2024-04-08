@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210, 22%, 85%;
     --background-inverted: 224 71.4% 4.1%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
@@ -29,7 +29,7 @@
 
   .dark {
     --background: 224 71.4% 4.1%;
-    --background-inverted: 0 0% 100%;
+    --background-inverted: 210, 22%, 85%;
     --foreground: 210 20% 98%;
     --card: 224 71.4% 4.1%;
     --card-foreground: 210 20% 98%;
@@ -64,7 +64,6 @@ body {
   overflow: hidden;
   z-index: 1;
   // background-image: url("/image/backgrounds/bg-ellipses.svg");
-
   @media (max-width: 500px) {
     background-color: var(--background);
     background-position: center 4%;

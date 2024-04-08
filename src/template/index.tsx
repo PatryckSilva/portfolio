@@ -3,7 +3,7 @@ import Header from "./partials/Header";
 
 const MainTemplate = ({ children }: { children: ReactElement }) => {
   return (
-    <main className={`flex w-full flex-col`}>
+    <main className={`container flex flex-col`}>
       <Header />
       {children}
     </main>

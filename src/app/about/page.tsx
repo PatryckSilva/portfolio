@@ -1,4 +1,4 @@
-import { MyStacks } from "@/components/Profile";
+import { MyStacks } from "@/components/MyStacks";
 
 export default function About() {
   return (
