@@ -76,9 +76,37 @@ body {
   }
 }
 
-// .glass_effect {
-//   background: rgba(255, 255, 255, 0.08);
-//   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-//   backdrop-filter: blur(15.6px);
-//   -webkit-backdrop-filter: blur(15.6px);
-// }
+@media (min-width: 768px) {
+  @keyframes rotating-text {
+    0%,
+    100% {
+      bottom: 96px;
+    }
+    25% {
+      bottom: 96px;
+    }
+    30% {
+      bottom: 66px;
+    }
+    45% {
+      bottom: 66px;
+    }
+    50% {
+      bottom: 32px;
+    }
+    65% {
+      bottom: 32px;
+    }
+    70% {
+      bottom: 0;
+    }
+    95% {
+      bottom: 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .md\:animate-rotate-text {
+    animation: rotating-text 15s ease infinite;
+  }
+}

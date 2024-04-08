@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const ReactLogo = () => {
   return (
-    <button className="absolute -top-[4px] left-[45px] cursor-pointer rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-background_inverted p-1 transition-all duration-500">
+    <button className="absolute -top-[4px] left-[45px] cursor-pointer rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-muted p-1 transition-all duration-500 ">
         <svg viewBox="0 0 128 128">
           <g fill="#61DAFB">
             <circle r="11.4" cy="64" cx="64"></circle>
@@ -17,8 +17,8 @@ export const ReactLogo = () => {
 
 export const TailwindLogo = () => {
   return (
-    <button className="absolute -top-[4px] right-[45px] cursor-pointer rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-background_inverted p-1 transition-all duration-500">
+    <button className="absolute -top-[4px] right-[45px] cursor-pointer rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-muted p-1 transition-all duration-500">
         <svg
           viewBox="0 0 48 48"
           y="0px"
@@ -37,8 +37,8 @@ export const TailwindLogo = () => {
 
 export const TypescriptLogo = () => {
   return (
-    <button className="absolute -left-4 top-20 cursor-pointer rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="relative z-[2] block size-10 rounded-full bg-background_inverted p-2 transition-all duration-500">
+    <button className="absolute -left-4 top-20 cursor-pointer rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="relative z-[2] block size-10 rounded-full bg-muted p-2 transition-all duration-500">
         <svg
           fill="none"
           viewBox="0 0 512 512"
@@ -60,8 +60,8 @@ export const TypescriptLogo = () => {
 
 export const JavascriptLogo = () => {
   return (
-    <button className="absolute -left-0 bottom-8 cursor-pointer rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="z-[2] block size-10 rounded-full bg-background_inverted p-2 transition-all duration-500">
+    <button className="absolute -left-0 bottom-8 cursor-pointer rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="z-[2] block size-10 rounded-full bg-muted p-2 transition-all duration-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 630 630"
@@ -77,8 +77,8 @@ export const JavascriptLogo = () => {
 
 export const NodeLogo = () => {
   return (
-    <button className="absolute -right-4 top-20 cursor-pointer rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-background_inverted p-1 transition-all duration-500">
+    <button className="absolute -right-4 top-20 cursor-pointer rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-muted p-1 transition-all duration-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 128 128"
@@ -96,8 +96,8 @@ export const NodeLogo = () => {
 
 export const NextLogo = () => {
   return (
-    <button className="absolute -right-0 bottom-8 flex cursor-pointer items-center justify-center rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="z-[2] block size-10 rounded-full bg-background_inverted  transition-all duration-500">
+    <button className="absolute -right-0 bottom-8 flex cursor-pointer items-center justify-center rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="z-[2] block size-10 rounded-full bg-muted  transition-all duration-500">
         <figure className={`relative size-10`}>
           <Image
             src={"/images/stacks/Next-js.svg"}
@@ -112,8 +112,8 @@ export const NextLogo = () => {
 
 export const ReactQueryLogo = () => {
   return (
-    <button className="absolute -bottom-4 right-[40%] cursor-pointer rounded-full border border-gray-400/50 bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95">
-      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-background_inverted p-1 transition-all duration-500">
+    <button className="absolute -bottom-4 right-[40%] cursor-pointer rounded-full border bg-cover p-[2px] transition-all duration-500 hover:scale-95 active:scale-95 dark:border-gray-400/90">
+      <span className="z-[2] block h-[40px] w-[40px] rounded-full bg-muted p-1 transition-all duration-500">
         <figure className={`relative size-8`}>
           <Image
             src={"/images/stacks/react-query-logo.svg"}
@@ -128,8 +128,8 @@ export const ReactQueryLogo = () => {
 
 export const ProfileCard = () => {
   return (
-    <button className="z-0 h-[200px] w-[200px] cursor-pointer rounded-full border-2 p-1 transition-all duration-500 hover:border-gray-400/50">
-      <div className="flex h-full w-full items-center justify-center rounded-full bg-background_inverted object-cover p-2 transition-all duration-500 hover:scale-95 active:scale-95">
+    <button className="z-0 h-[200px] w-[200px] cursor-pointer rounded-full border-2 p-1 transition-all duration-500 hover:dark:border-gray-400/90">
+      <div className="flex h-full w-full items-center justify-center rounded-full bg-muted object-cover p-2 transition-all duration-500 hover:scale-95 active:scale-95">
         <span className=" inline-block size-full">
           <figure className={`relative size-full overflow-hidden rounded-full`}>
             <Image
