@@ -53,6 +53,12 @@
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .bg_ellipses {
@@ -109,4 +115,10 @@ body {
   .md\:animate-rotate-text {
     animation: rotating-text 15s ease infinite;
   }
+}
+
+.text_gradients {
+  background: -webkit-linear-gradient(#6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

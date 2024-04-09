@@ -4,6 +4,7 @@ import "@/styles/globals.scss";
 import Providers from "@/providers";
 import { ReactElement } from "react";
 import EllipseBackground from "@/components/Backgrounds/EllipseBackground";
+import MainTemplate from "@/template";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative min-h-[200vh] bg-background font-sans antialiased`}
+        className={`relative min-h-dvh bg-background font-sans antialiased `}
       >
-        <aside className={`fixed -right-10 -top-10 opacity-90`}>
+        <aside className={`fixed -right-10 -top-10 z-[-1] opacity-90`}>
           <EllipseBackground />
         </aside>
-        <Providers>{children}</Providers>
+        <Providers>
+          <MainTemplate>{children}</MainTemplate>
+        </Providers>
       </body>
     </html>
   );

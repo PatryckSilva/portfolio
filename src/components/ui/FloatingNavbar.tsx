@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "./themeToggle";
 
 export const FloatingNav = ({
   navItems,
@@ -52,7 +52,7 @@ export const FloatingNav = ({
         // }}
         className={cn(
           "container mx-auto mt-5 flex items-center justify-between space-x-4 rounded-xl border border-white/5 bg-muted p-2 px-3 backdrop-blur-xl",
-          "shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]",
+          "z-50 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]",
           className,
         )}
       >
