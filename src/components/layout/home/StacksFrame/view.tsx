@@ -10,6 +10,7 @@ import {
   GitLogo,
   GithubLogo,
 } from "@/components/ui/logos";
+import { links } from "@/utils/constants";
 
 export function StacksFrame() {
   return (
@@ -94,6 +95,6 @@ export const projects = [
     title: "Github",
     description:
       "GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git. Ele permite que desenvolvedores e equipes colaborem em projetos de software, rastreiem e gerenciem as alterações feitas no código, facilitem revisões de código, gerenciem problemas e organizem o desenvolvimento de software de forma eficiente.",
-    link: "https://github.com/PatryckSilva",
+    link: links.github,
   },
 ];

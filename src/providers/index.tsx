@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "next-themes";
 import React, { ReactElement } from "react";
-import useAOS from "@/hook/useAOS";
+import useAOS from "@/hooks/useAOS";
 const Providers = ({ children }: { children: ReactElement }): ReactElement => {
   const aos = useAOS();
   return (

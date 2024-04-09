@@ -80,19 +80,9 @@ export const useRenderStacksInCircle = () => {
     }
 
     if (logo.id < 7) {
-      if (logo.id === 2 || logo.id === 3) {
-        return (
-          <button className={`${logo.className}`}>
-            <span className="relative z-[2] flex size-10 items-center justify-center rounded-full bg-muted p-2 transition-all duration-500">
-              {logo.logo}
-            </span>
-          </button>
-        );
-      }
-
       return (
         <button className={`${logo.className}`}>
-          <span className="relative z-[2] flex size-10 items-center justify-center rounded-full bg-muted p-1.5 transition-all duration-500">
+          <span className="relative z-[2] flex size-[42px] items-center justify-center rounded-full bg-muted p-2 transition-all duration-500">
             {logo.logo}
           </span>
         </button>

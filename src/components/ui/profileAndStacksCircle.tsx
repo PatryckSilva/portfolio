@@ -1,4 +1,4 @@
-import { useRenderStacksInCircle } from "@/hook/useRenderStacksInCircle";
+import { useRenderStacksInCircle } from "@/hooks/useRenderStacksInCircle";
 
 export const MyStacks = () => {
   const { logos, renderLogos } = useRenderStacksInCircle();
@@ -9,13 +9,13 @@ export const MyStacks = () => {
         className=" relative border-spacing-4 rounded-full border-2 border-dashed border-black/60 p-10 dark:border-gray-400/90 "
       >
         {logos.map(logo => (
-          <div
+          <figure
             className={`h-full w-full`}
             key={logo.id}
             // data-aos={logo.dataaos}
           >
             {renderLogos(logo)}
-          </div>
+          </figure>
         ))}
       </section>
     </aside>
