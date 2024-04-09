@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "./themeToggle";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export const FloatingNav = ({
   navItems,
