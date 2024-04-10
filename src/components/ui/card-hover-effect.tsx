@@ -1,12 +1,14 @@
 "use client";
+import { useWidth } from "@/hooks/useWidth";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const CardsHoverEffect = ({
   items,
   className,
+  showAllStacks,
 }: {
   items: {
     id: number;
@@ -16,28 +18,33 @@ export const CardsHoverEffect = ({
     link: string;
   }[];
   className?: string;
+  showAllStacks: boolean;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
+  const widthSize = useWidth();
+
+  const filteredItems =
+    showAllStacks || widthSize > 1400 ? items : items.slice(0, 3);
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 py-10  md:grid-cols-2  lg:grid-cols-3",
+        "grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-0",
         className,
       )}
     >
-      {items.map((item, idx) => (
+      {filteredItems.map((item, idx) => (
         <Link
           href={item?.link}
           key={item?.id}
-          className="group relative  block h-full w-full p-2"
+          className="group relative block h-full w-full md:p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-slate-500/20  dark:bg-slate-800/[0.8]"
+                className="absolute inset-0 block h-full w-full rounded-3xl bg-slate-500/20 dark:bg-slate-800/[0.8]"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -111,7 +118,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 text-sm leading-relaxed tracking-wide text-slate-700 dark:text-zinc-300/75",
+        "mt-4 text-sm leading-relaxed text-slate-700 dark:text-zinc-300/75 md:tracking-wide",
         className,
       )}
     >

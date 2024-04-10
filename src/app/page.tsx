@@ -1,13 +1,17 @@
-import EllipseBackground from "@/components/Backgrounds/EllipseBackground";
+import { ProjectsFrame } from "@/components/layout/home/ProjectsFrame";
 import { StacksFrame } from "@/components/layout/home/StacksFrame/view";
-import { StartingFrame } from "@/components/layout/home/StartingFrame/view";
-import { useSearchParams } from "next/navigation";
+import { StartingFrame } from "@/components/layout/home/StartingFrame";
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}) {
   return (
     <>
       <StartingFrame />
-      <StacksFrame />
+      <ProjectsFrame />
+      <StacksFrame searchParams={searchParams} />
     </>
   );
 }

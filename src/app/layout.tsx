@@ -5,6 +5,7 @@ import Providers from "@/providers";
 import { ReactElement } from "react";
 import EllipseBackground from "@/components/Backgrounds/EllipseBackground";
 import MainTemplate from "@/template";
+import { AOSInit } from "@/aos";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <AOSInit />
       <body
         className={`relative min-h-dvh bg-background font-sans antialiased `}
       >
         <aside className={`fixed -right-10 -top-10 z-[-1] opacity-90`}>
           <EllipseBackground />
         </aside>
+
         <Providers>
           <MainTemplate>{children}</MainTemplate>
         </Providers>

@@ -11,15 +11,36 @@ import {
   GithubLogo,
 } from "@/components/ui/logos";
 import { links } from "@/utils/constants";
+import Link from "next/link";
 
-export function StacksFrame() {
+export function StacksFrame({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}) {
+  const showAllStacks = Boolean(searchParams["show_all_stacks"]) ?? false;
+
+  const handlePushQuery = () => {
+    if (showAllStacks) {
+      return "?";
+    }
+
+    return "?show_all_stacks=true";
+  };
   return (
-    <div className="mx-auto flex w-full flex-col rounded-lg border-2 border-border bg-muted/60 p-8">
-      <span className={`px-2 text-4xl`}>
+    <section
+      id="stacks"
+      data-aos="fade-up"
+      className=" flex w-full flex-col gap-4 rounded-lg border-2 border-border bg-muted/60 p-4 md:p-8"
+    >
+      <h2 className={`px-2 text-4xl font-bold`}>
         Minhas <span className={`text_gradients`}>Stacks</span>
-      </span>
-      <CardsHoverEffect items={projects} />
-    </div>
+      </h2>
+      <CardsHoverEffect showAllStacks={showAllStacks} items={projects} />
+      <Link href={handlePushQuery()} className={`self-end xl:hidden`}>
+        {showAllStacks ? "Ver Menos" : "Ver Todos"}
+      </Link>
+    </section>
   );
 }
 

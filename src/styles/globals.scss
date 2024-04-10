@@ -53,7 +53,7 @@
 
 body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
 }
 
 ::selection {
