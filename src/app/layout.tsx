@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.scss";
 import Providers from "@/providers";
 import { ReactElement } from "react";
-import MainTemplate from "@/template";
 import { AOSInit } from "@/aos";
 import MovingEllipseBackground from "@/components/Backgrounds/EllipseBackground";
 
@@ -20,14 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AOSInit />
-      <body
-        className={`relative min-h-dvh bg-background font-sans antialiased `}
-      >
+      <body className={`relative bg-background font-sans antialiased `}>
         <MovingEllipseBackground />
 
-        <Providers>
-          <MainTemplate>{children}</MainTemplate>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

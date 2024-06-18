@@ -1,5 +1,5 @@
-import { ProjectsFrame } from "@/components/layout/home/ProjectsFrame";
-import { StacksFrame } from "@/components/layout/home/StacksFrame/view";
+import { ProjectsFrame } from "@/components/layout/about/ProjectsFrame";
+import { StacksFrame } from "@/components/layout/about/StacksFrame/view";
 
 export default function About({
   searchParams,
@@ -9,7 +9,6 @@ export default function About({
   return (
     <>
       <ProjectsFrame />
-      <StacksFrame searchParams={searchParams} />
     </>
   );
 }

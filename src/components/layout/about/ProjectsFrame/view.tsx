@@ -30,14 +30,16 @@ const projectsArray = [
 export function ViewProjects() {
   return (
     <section
-      className={` relative mb-20 flex w-full flex-col items-center justify-start gap-10 rounded-lg border-2 border-border bg-muted/60 p-10`}
+      className={`relative flex h-full w-full flex-col items-center justify-center gap-10 rounded-lg border-2 border-border bg-muted/60 p-10`}
     >
       <h2 className={`text_gradients px-2 text-4xl font-bold lg:self-start`}>
         Projetos
       </h2>
+
       <center className={`hidden lg:block`}>
         <CardsProjects />
       </center>
+
       <center className={`w-full lg:hidden`}>
         <CarouselDemo />
       </center>

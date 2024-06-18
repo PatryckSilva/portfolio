@@ -9,13 +9,12 @@ import {
 import { MyStacks } from "@/components/ui/profileAndStacksCircle";
 import { cn } from "@/lib/utils";
 import { links } from "@/utils/constants";
-import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
 export const ViewStartingFrame = () => {
   const texts = ["Front-end", "Back-end", "FullStack", "Web"];
 
   return (
-    <section className="flex h-dvh w-full flex-col items-center justify-start gap-10 pt-2 xs:justify-evenly xs:gap-5 xs:pt-0">
+    <section className="flex h-dvh w-full flex-col items-center justify-center gap-10 pt-2  xs:gap-5 xs:pt-0">
       <section
         className={`flex w-full flex-col-reverse items-center justify-around gap-14 md:flex-row`}
       >
@@ -46,10 +45,7 @@ export const ViewStartingFrame = () => {
           </aside>
         </article>
       </section>
-      <div className={`flex flex-col items-center gap-2`}>
-        <span className={`uppercase`}>scroll</span>
-        <IconArrowDown className="animate-bounce" />
-      </div>
+      <div className={`flex flex-col items-center gap-2`}></div>
     </section>
   );
 };

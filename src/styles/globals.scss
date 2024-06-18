@@ -53,6 +53,9 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
+  height: calc(100dvh - 4rem);
+  max-height: 100dvh;
   @apply scroll-smooth;
 }
 
