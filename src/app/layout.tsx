@@ -23,9 +23,7 @@ export default function RootLayout({
       <body
         className={`relative min-h-dvh bg-background font-sans antialiased `}
       >
-        <aside className={`fixed -right-10 -top-10 z-[-1] opacity-90`}>
-          <MovingEllipseBackground />
-        </aside>
+        <MovingEllipseBackground />
 
         <Providers>
           <MainTemplate>{children}</MainTemplate>

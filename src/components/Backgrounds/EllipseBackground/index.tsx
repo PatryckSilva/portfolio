@@ -1,5 +1,7 @@
 "use client";
 import useMousePosition from "@/hooks/useMousePosition";
+import { useWidth } from "@/hooks/useWidth";
+import { cn } from "@/lib/utils";
 
 const EllipseBackground = () => {
   return (
@@ -164,13 +166,16 @@ const EllipseBackground = () => {
 
 const MovingEllipseBackground = () => {
   const { x, y } = useMousePosition();
-  const svgWidth = 1440; // Largura do SVG
-  const svgHeight = 1080; // Altura do SVG
+  const widthSize = useWidth();
+  const isMobile = widthSize < 1024;
   return (
     <aside
-      className="fixed -top-10 right-28 z-[-1] opacity-70"
+      className={cn(
+        `${isMobile ? "fixed !-right-28 !-top-10 z-[-1] opacity-90" : "absolute z-[-1] opacity-70"}`,
+      )}
       style={{
-        transform: `translate(${x - svgWidth / 2}px, ${y - svgHeight / 2}px)`,
+        top: `${isMobile ? "auto" : y - 500}px`,
+        left: `${isMobile ? "auto" : x - 800}px`,
       }}
     >
       <EllipseBackground />
