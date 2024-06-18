@@ -3,7 +3,7 @@ import { useWidth } from "@/hooks/useWidth";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const CardsHoverEffect = ({
   items,

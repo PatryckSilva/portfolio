@@ -54,7 +54,8 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  height: calc(100dvh - 4rem);
+  height: 100dvh;
+  width: screen;
   max-height: 100dvh;
   @apply scroll-smooth;
 }
@@ -62,27 +63,6 @@ body {
 ::selection {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
-}
-
-.bg_ellipses {
-  background-color: var(--background);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  // background-image: url("/image/backgrounds/bg-ellipses.svg");
-  @media (max-width: 500px) {
-    background-color: var(--background);
-    background-position: center 4%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    // background-image: url("/image/backgrounds/bg-ellipses.svg");
-  }
 }
 
 @media (min-width: 768px) {

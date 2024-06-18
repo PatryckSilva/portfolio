@@ -1,5 +1,5 @@
 "use client";
-import { Highlight } from "@/components/ui/TextHighlight";
+import { TextHighlighter } from "@/components/TextHighlighter";
 import { TypeWriteEffect } from "@/components/ui/TypewriteEffect";
 import {
   DarkGithubLogo,
@@ -32,13 +32,13 @@ export const ViewStartingFrame = () => {
         >
           <h1 className="mx-auto flex max-w-4xl flex-col items-center text-center text-2xl font-bold leading-relaxed text-neutral-700 dark:text-white md:text-3xl lg:text-5xl lg:leading-snug">
             Sou Patryck Silva!
-            <Highlight
+            <TextHighlighter
               className={cn(
                 "text-xl text-black dark:text-white sm:text-2xl lg:text-3xl",
               )}
             >
               Desenvolvedor <TypeWriteEffect texts={texts} />
-            </Highlight>
+            </TextHighlighter>
           </h1>
           <aside className={`hidden md:flex`}>
             <ListingSocialMedias />
