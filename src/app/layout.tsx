@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import "@/styles/globals.scss";
 import Providers from "@/providers";
 import { ReactElement } from "react";
-import EllipseBackground from "@/components/Backgrounds/EllipseBackground";
 import MainTemplate from "@/template";
 import { AOSInit } from "@/aos";
+import MovingEllipseBackground from "@/components/Backgrounds/EllipseBackground";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`relative min-h-dvh bg-background font-sans antialiased `}
       >
         <aside className={`fixed -right-10 -top-10 z-[-1] opacity-90`}>
-          <EllipseBackground />
+          <MovingEllipseBackground />
         </aside>
 
         <Providers>
