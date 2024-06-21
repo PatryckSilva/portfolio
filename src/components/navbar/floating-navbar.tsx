@@ -35,7 +35,7 @@ export const FloatingNav = ({
               <TooltipTrigger
                 className={cn(
                   `rounded-md border-none bg-accent text-2xl shadow-none hover:bg-primary/20 hover:dark:bg-white/20`,
-                  `${pathname === link ? "bg-primary/20 dark:bg-white/20" : ""}`,
+                  `${pathname === link && link !== "" ? "bg-primary/20 dark:bg-white/20" : ""}`,
                 )}
                 asChild
               >
