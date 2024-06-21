@@ -18,7 +18,7 @@ const Providers = ({ children }: { children: ReactElement }): ReactElement => {
         <motion.div
           key={pathname}
           className={cn(
-            `section_height ${GeistMono.className} ${GeistSans.className} container flex h-full flex-col`,
+            ` ${GeistMono.className} ${GeistSans.className} container flex h-full flex-col`,
           )}
         >
           <Transition />
