@@ -16,7 +16,7 @@ export const ViewStartingFrame = () => {
   return (
     <section className="flex h-dvh w-full flex-col items-center justify-center gap-10 pt-2  xs:gap-5 xs:pt-0">
       <section
-        className={`flex w-full flex-col-reverse items-center justify-around gap-14 md:flex-row`}
+        className={`flex w-full flex-col-reverse items-center justify-around gap-14 md:flex-row xl:gap-32`}
       >
         <aside className={`md:hidden`}>
           <ListingSocialMedias />
@@ -30,11 +30,11 @@ export const ViewStartingFrame = () => {
           data-aos="fade-up"
           className={`flex flex-col items-center gap-10`}
         >
-          <h1 className="mx-auto flex max-w-4xl flex-col items-center text-center text-2xl font-bold leading-relaxed text-neutral-700 dark:text-white md:text-3xl lg:text-5xl lg:leading-snug">
+          <h1 className="mx-auto flex w-[354px] max-w-4xl flex-col items-center text-center text-2xl font-bold leading-relaxed text-neutral-700 dark:text-white md:text-3xl lg:w-max lg:text-4xl lg:leading-snug xl:text-5xl">
             Sou Patryck Silva!
             <TextHighlighter
               className={cn(
-                "text-xl text-black dark:text-white sm:text-2xl lg:text-3xl",
+                "text-xl text-black dark:text-white sm:text-2xl xl:text-3xl",
               )}
             >
               Desenvolvedor <TypeWriteEffect texts={texts} />
@@ -45,7 +45,7 @@ export const ViewStartingFrame = () => {
           </aside>
         </article>
       </section>
-      <div className={`flex flex-col items-center gap-2`}></div>
+      <div />
     </section>
   );
 };
