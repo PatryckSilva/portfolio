@@ -11,7 +11,8 @@ const MovingEllipseBackground = () => {
   return (
     <aside
       className={cn(
-        `${isMobile ? "fixed !-right-28 !-top-10 z-[-1] opacity-90" : "absolute z-[-1] opacity-70"}`,
+        "md:max-w-screen-md",
+        `${isMobile ? "fixed -right-40 -top-10 z-[-1] opacity-90 md:-right-0 md:-top-20" : "absolute z-[-1] opacity-70"}`,
       )}
       style={{
         top: `${isMobile ? "auto" : y - 500}px`,
