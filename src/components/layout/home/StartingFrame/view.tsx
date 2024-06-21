@@ -14,7 +14,7 @@ export const ViewStartingFrame = () => {
   const texts = ["Front-end", "Back-end", "FullStack", "Web"];
 
   return (
-    <section className="flex h-dvh w-full flex-col items-center justify-center gap-10 pt-2  xs:gap-5 xs:pt-0">
+    <section className="flex h-dvh w-full flex-col items-center justify-start gap-10 pt-10 xs:gap-5 sm:pt-40 lg:justify-center lg:pt-0">
       <section
         className={`flex w-full flex-col-reverse items-center justify-around gap-14 md:flex-row xl:gap-32`}
       >
@@ -45,7 +45,9 @@ export const ViewStartingFrame = () => {
           </aside>
         </article>
       </section>
-      <div />
+      <Link href={"/projects"} className={`text_gradients`}>
+        Veja meus projetos e contribuições
+      </Link>
     </section>
   );
 };

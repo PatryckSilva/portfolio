@@ -1,23 +1,35 @@
-import React from "react";
+import React, { SVGProps } from "react";
 
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { IconMessage } from "@tabler/icons-react";
+import { FloatingNav } from "@/components/navbar/floating-navbar";
+import {
+  HomeIcon,
+  MessageIcon,
+  PersonIcons,
+  ProjectsIcon,
+} from "@/components/navbar/nav-icons";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 function Header() {
   const navItems = [
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="size-5 text-neutral-500 dark:text-white" />,
+      icon: <HomeIcon />,
     },
     {
       name: "About",
       link: "/about",
-      icon: <IconUser className="size-5 text-neutral-500 dark:text-white" />,
+      icon: <PersonIcons />,
     },
     {
       name: "Contact",
       link: "/contact",
-      icon: <IconMessage className="size-5 text-neutral-500 dark:text-white" />,
+      icon: <MessageIcon />,
+    },
+    {
+      name: "Switch Theme",
+      link: "",
+      icon: <ThemeToggle />,
     },
   ];
   return (
