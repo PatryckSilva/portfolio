@@ -1,5 +1,6 @@
 "use client";
 import { TextHighlighter } from "@/components/TextHighlighter";
+import { ChevronsRight } from "@/components/navbar/nav-icons";
 import { TypeWriteEffect } from "@/components/ui/TypewriteEffect";
 import {
   DarkGithubLogo,
@@ -10,11 +11,11 @@ import { MyStacks } from "@/components/ui/profileAndStacksCircle";
 import { cn } from "@/lib/utils";
 import { links } from "@/utils/constants";
 import Link from "next/link";
+
 export const ViewStartingFrame = () => {
   const texts = ["Front-end", "Back-end", "FullStack", "Web"];
-
   return (
-    <section className="flex h-dvh w-full flex-col items-center justify-start gap-10 pt-10 xs:gap-5 sm:pt-40 lg:justify-center lg:pt-0">
+    <section className="flex h-dvh w-full flex-col items-center justify-start gap-10 pt-10 xs:gap-5 sm:pt-40 md:gap-14 lg:justify-center lg:pt-0">
       <section
         className={`flex w-full flex-col-reverse items-center justify-around gap-14 md:flex-row xl:gap-32`}
       >
@@ -34,7 +35,7 @@ export const ViewStartingFrame = () => {
             Sou Patryck Silva!
             <TextHighlighter
               className={cn(
-                "text-xl text-black dark:text-white sm:text-2xl xl:text-3xl",
+                "mt-2 text-xl text-black dark:text-white sm:text-2xl xl:text-3xl",
               )}
             >
               Desenvolvedor <TypeWriteEffect texts={texts} />
@@ -45,8 +46,14 @@ export const ViewStartingFrame = () => {
           </aside>
         </article>
       </section>
-      <Link href={"/projects"} className={`text_gradients`}>
-        Veja meus projetos e contribuições
+      {/* TODO: add link to projects */}
+      <Link href={"/"} className="cta !flex !items-center !text-white">
+        <span className="hover-underline-animation">
+          Veja meus projetos e contribuições{" "}
+        </span>
+        <figure>
+          <ChevronsRight className="text-background_inverted" />
+        </figure>
       </Link>
     </section>
   );

@@ -50,13 +50,7 @@ export const FloatingNav = ({
                     {icon}
                   </Link>
                 ) : (
-                  <span
-                    className={cn(
-                      `relative flex w-full items-center p-2 text-lg font-semibold text-background_inverted`,
-                    )}
-                  >
-                    {icon}
-                  </span>
+                  icon
                 )}
               </TooltipTrigger>
               <TooltipContent
