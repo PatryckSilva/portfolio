@@ -9,7 +9,8 @@ import { usePathname } from "next/navigation";
 import React, { ReactElement } from "react";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { HeroHighlight } from "@/components/ui/TextHighlight";
+import { HeroHighlight } from "@/components/ui/hero-highlight";
+
 const Providers = ({ children }: { children: ReactElement }): ReactElement => {
   const pathname = usePathname();
   return (

@@ -17,17 +17,22 @@ function Header() {
       icon: <HomeIcon />,
     },
     {
-      name: "About",
+      name: "Projetos",
+      link: "/projects",
+      icon: <ProjectsIcon />,
+    },
+    {
+      name: "Sobre",
       link: "/about",
       icon: <PersonIcons />,
     },
     {
-      name: "Contact",
+      name: "Contato",
       link: "/contact",
       icon: <MessageIcon />,
     },
     {
-      name: "Switch Theme",
+      name: "Trocar Tema",
       link: "",
       icon: <ThemeToggle />,
     },
