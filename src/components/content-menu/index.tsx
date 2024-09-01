@@ -1,16 +1,9 @@
 import {
   ContextMenu,
-  ContextMenuCheckboxItem,
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuLabel,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
-  ContextMenuSeparator,
   ContextMenuShortcut,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 import { GeistMono } from "geist/font/mono";
@@ -21,17 +14,14 @@ import {
   PersonIcons,
   ProjectsIcon,
 } from "../navbar/nav-icons";
-import { link } from "fs";
 import Link from "next/link";
 import {
-  ArrowDownIcon,
   CodeIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
   Share1Icon,
 } from "@radix-ui/react-icons";
 import { links } from "@/utils/constants";
-import { DarkGithubLogo, DarkLinkedinLogo } from "../ui/logos";
 
 export function ContextMenuProvider({
   children,
@@ -60,6 +50,7 @@ export function ContextMenuProvider({
       icon: <MessageIcon fontSize={18} />,
     },
   ];
+
   const socialMedias = [
     {
       name: "LinkedIn",
@@ -80,7 +71,8 @@ export function ContextMenuProvider({
         {children}
       </ContextMenuTrigger>
 
-      <ContextMenuContent className="w-64 border-none backdrop-blur-xl ">
+      <ContextMenuContent className="w-64 border-2  border-white/20 backdrop-blur-xl">
+        {/* TODO: adicionar function de copiar link */}
         <ContextMenuItem
           className={`hover:!bg-black/10 hover:dark:!bg-white/20`}
           inset
