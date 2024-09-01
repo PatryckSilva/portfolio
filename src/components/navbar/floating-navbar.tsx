@@ -34,8 +34,8 @@ export const FloatingNav = ({
             <Tooltip>
               <TooltipTrigger
                 className={cn(
-                  `rounded-md border-none bg-accent text-2xl shadow-none hover:bg-primary/20 hover:dark:bg-white/20`,
-                  `${pathname === link && link !== "" ? "bg-primary/20 dark:bg-white/20" : ""}`,
+                  `flex items-center rounded-md border-none text-2xl shadow-none hover:bg-primary hover:dark:bg-white/20`,
+                  `${pathname === link && link !== "" ? "bg-primary bg-opacity-20 dark:bg-white/20" : ""}`,
                 )}
                 asChild
               >
@@ -44,7 +44,7 @@ export const FloatingNav = ({
                     href={link}
                     aria-label={name}
                     className={cn(
-                      `relative flex w-full items-center p-2 text-lg font-semibold text-background_inverted`,
+                      `relative flex w-max items-center p-2 text-lg font-semibold text-background_inverted`,
                     )}
                   >
                     {icon}
@@ -57,7 +57,7 @@ export const FloatingNav = ({
                 aria-checked={false}
                 className={` hidden min-w-[100px] -translate-x-[90px] translate-y-[34px] text-center lg:block `}
               >
-                <p>{name} </p>
+                <p>{name}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

@@ -1,6 +1,5 @@
 import React, { SVGProps } from "react";
 
-import { IconMessage } from "@tabler/icons-react";
 import { FloatingNav } from "@/components/navbar/floating-navbar";
 import {
   HomeIcon,
@@ -9,26 +8,27 @@ import {
   ProjectsIcon,
 } from "@/components/navbar/nav-icons";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { pages } from "@/utils/constants";
 function Header() {
   const navItems = [
     {
-      name: "Home",
-      link: "/",
+      name: Object.keys(pages)[0],
+      link: pages.Home,
       icon: <HomeIcon />,
     },
     {
-      name: "Projetos",
-      link: "/projects",
+      name: Object.keys(pages)[1],
+      link: pages.Projetos,
       icon: <ProjectsIcon />,
     },
     {
-      name: "Sobre",
-      link: "/about",
+      name: Object.keys(pages)[2],
+      link: pages.Sobre,
       icon: <PersonIcons />,
     },
     {
-      name: "Contato",
-      link: "/contact",
+      name: Object.keys(pages)[3],
+      link: pages.Contato,
       icon: <MessageIcon />,
     },
     {
