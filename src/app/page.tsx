@@ -1,9 +1,9 @@
-import { StartingFrame } from "@/components/layout/home/StartingFrame";
+import { HomeLayout } from "@/components/layout/home/HomeLayout";
 
 export default function Home() {
   return (
     <>
-      <StartingFrame />
+      <HomeLayout />
     </>
   );
 }

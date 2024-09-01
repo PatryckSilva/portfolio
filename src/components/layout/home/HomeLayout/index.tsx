@@ -1,4 +1,3 @@
-"use client";
 import { TextHighlighter } from "@/components/TextHighlighter";
 import { ChevronsRight } from "@/components/navbar/nav-icons";
 import { TypeWriteEffect } from "@/components/ui/TypewriteEffect";
@@ -9,10 +8,10 @@ import {
 } from "@/components/ui/logos";
 import { MyStacks } from "@/components/ui/profileAndStacksCircle";
 import { cn } from "@/lib/utils";
-import { links } from "@/utils/constants";
+import { links, pages } from "@/utils/constants";
 import Link from "next/link";
 
-export const StartingFrame = () => {
+export const HomeLayout = () => {
   const texts = ["Front-end", "Back-end", "FullStack", "Web"];
   return (
     <section className="flex h-dvh w-full flex-col items-center justify-start gap-10 pt-10 xs:gap-5 sm:pt-40 md:gap-14 lg:justify-center lg:pt-0">
@@ -41,13 +40,19 @@ export const StartingFrame = () => {
               Desenvolvedor <TypeWriteEffect texts={texts} />
             </TextHighlighter>
           </h1>
+
           <aside className={`hidden md:flex`}>
             <ListingSocialMedias />
           </aside>
         </article>
       </section>
-      {/* TODO: add link to projects */}
-      <Link href={"/"} className="cta !flex !items-center !text-white">
+
+      <Link
+        href={pages.Projetos}
+        className={cn(
+          "cta !flex !items-center !text-xs !text-white md:!text-base",
+        )}
+      >
         <span className="hover-underline-animation">
           Veja meus projetos e contribuições{" "}
         </span>
