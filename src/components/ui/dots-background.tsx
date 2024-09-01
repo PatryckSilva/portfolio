@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 import React from "react";
 
-export const HeroHighlight = ({
+export const DotsBackground = ({
   children,
   className,
   showGradient = true,

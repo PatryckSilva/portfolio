@@ -9,14 +9,14 @@ import { usePathname } from "next/navigation";
 import React, { ReactElement } from "react";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
+import { DotsBackground } from "@/components/ui/dots-background";
 import { ContextMenuProvider } from "@/components/content-menu";
 
 const Providers = ({ children }: { children: ReactElement }): ReactElement => {
   const pathname = usePathname();
   return (
     <ContextMenuProvider>
-      <HeroHighlight>
+      <DotsBackground>
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
@@ -31,7 +31,7 @@ const Providers = ({ children }: { children: ReactElement }): ReactElement => {
             </ThemeProvider>
           </motion.div>
         </AnimatePresence>
-      </HeroHighlight>
+      </DotsBackground>
     </ContextMenuProvider>
   );
 };
