@@ -125,7 +125,7 @@ body {
 
 .hover-underline-animation {
   position: relative;
-  color: var(--background-inverted);
+  color: var(--foreground);
   padding-bottom: 10px;
 }
 
@@ -137,7 +137,7 @@ body {
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: var(--background-inverted);
+  background-color: var(--foreground);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

@@ -50,7 +50,7 @@ export const HomeLayout = () => {
       <Link
         href={pages.Projetos}
         className={cn(
-          "cta !flex !items-center !text-xs !text-foreground md:!text-base",
+          "cta !flex !items-center !text-xs !font-medium !text-foreground md:!text-base",
         )}
       >
         <span className="hover-underline-animation">
