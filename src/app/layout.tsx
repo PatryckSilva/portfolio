@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AOSInit />
+
       <body className={`relative bg-background font-sans antialiased `}>
         <MovingEllipseBackground />
 

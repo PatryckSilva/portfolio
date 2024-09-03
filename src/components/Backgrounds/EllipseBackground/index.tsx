@@ -15,8 +15,8 @@ const MovingEllipseBackground = () => {
         `${isMobile ? "fixed -right-40 -top-10 z-[-1] opacity-90 md:-right-0 md:-top-20" : "absolute z-[-1] opacity-70"}`,
       )}
       style={{
-        top: `${isMobile ? "auto" : y - 500}px`,
-        left: `${isMobile ? "auto" : x - 600}px`,
+        top: `${isMobile ? "auto" : `${y - 400}px`}`,
+        left: `${isMobile ? "auto" : `${x - 500}px`}`,
       }}
     >
       <EllipseSVG />

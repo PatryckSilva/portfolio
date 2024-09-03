@@ -1,8 +1,8 @@
 export const EllipseSVG = () => {
   return (
     <svg
-      width={1240}
-      height={1150}
+      width={1000}
+      height={800}
       viewBox="0 0 1240 1150"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
