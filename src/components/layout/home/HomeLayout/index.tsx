@@ -50,14 +50,14 @@ export const HomeLayout = () => {
       <Link
         href={pages.Projetos}
         className={cn(
-          "cta !flex !items-center !text-xs !text-white md:!text-base",
+          "cta !flex !items-center !text-xs !text-foreground md:!text-base",
         )}
       >
         <span className="hover-underline-animation">
           Veja meus projetos e contribuições{" "}
         </span>
         <figure>
-          <ChevronsRight className="text-background_inverted" />
+          <ChevronsRight />
         </figure>
       </Link>
     </section>

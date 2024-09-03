@@ -11,6 +11,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { DotsBackground } from "@/components/ui/dots-background";
 import { ContextMenuProvider } from "@/components/content-menu";
+import { Toaster } from "@/components/ui/toaster";
 
 const Providers = ({ children }: { children: ReactElement }): ReactElement => {
   const pathname = usePathname();
@@ -29,6 +30,7 @@ const Providers = ({ children }: { children: ReactElement }): ReactElement => {
               <Header />
               {children}
             </ThemeProvider>
+            <Toaster />
           </motion.div>
         </AnimatePresence>
       </DotsBackground>

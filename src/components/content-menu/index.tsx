@@ -22,6 +22,7 @@ import {
   Share1Icon,
 } from "@radix-ui/react-icons";
 import { links } from "@/utils/constants";
+import { DevToolsButton } from "./dev-tools-button";
 
 export function ContextMenuProvider({
   children,
@@ -71,7 +72,7 @@ export function ContextMenuProvider({
         {children}
       </ContextMenuTrigger>
 
-      <ContextMenuContent className="w-64 border-2  border-white/20 backdrop-blur-xl">
+      <ContextMenuContent className="w-64 border border-white/20  backdrop-blur-xl">
         {/* TODO: adicionar function de copiar link */}
         <ContextMenuItem
           className={`hover:!bg-black/10 hover:dark:!bg-white/20`}
@@ -133,6 +134,9 @@ export function ContextMenuProvider({
             </ContextMenuItem>
           </Link>
         ))}
+        <ContextMenuLabel>Inspect</ContextMenuLabel>
+
+        <DevToolsButton />
       </ContextMenuContent>
     </ContextMenu>
   );
